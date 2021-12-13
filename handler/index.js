@@ -11,7 +11,7 @@ const globPromise = promisify(glob);
  * @param {Client} client
  */
 module.exports = async (client) => {
-    // Commands
+ 
     const commandFiles = await globPromise(`${process.cwd()}/commands/**/*.js`);
     commandFiles.map((value) => {
         const file = require(value);
@@ -24,11 +24,10 @@ module.exports = async (client) => {
         }
     });
 
-    // Events
     const eventFiles = await globPromise(`${process.cwd()}/events/*.js`);
     eventFiles.map((value) => require(value));
 
-    // Slash Commands
+
     const slashCommands = await globPromise(
         `${process.cwd()}/SlashCommands/*/*.js`
     );
@@ -44,12 +43,12 @@ module.exports = async (client) => {
     });
     client.on("ready", async () => {
         // Register for a single guild
-        await client.guilds.cache
-            .get("885518190220836926")
-            .commands.set(arrayOfSlashCommands);
+        //await client.guilds.cache
+          //  .get("885518190220836926")
+            //.commands.set(arrayOfSlashCommands);
 
         // Register for all the guilds the bot is in
-        // await client.application.commands.set(arrayOfSlashCommands);
+         await client.application.commands.set(arrayOfSlashCommands);
     });
 
     // mongoose
