@@ -1,5 +1,5 @@
 {
-    "token": "CANNOT BE SHOWN",
+    "token": "CANT_BE_SHOWN",
     "prefix": "/",
     "mongooseConnectionString": ""
 }
