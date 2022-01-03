@@ -1,4 +1,7 @@
 const { Client, Collection } = require("discord.js");
+require('dotenv').config();
+
+const token = process.env.TOKEN
 
 const client = new Client({
     intents: 32767,
@@ -13,4 +16,4 @@ client.config = require("./config.json");
 // Initializing the project
 require("./handler")(client);
 
-client.login(client.config.token);
+client.login(token);

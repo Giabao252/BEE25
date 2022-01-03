@@ -1,5 +1,4 @@
 {
-    "token": "CANT_BE_SHOWN",
     "prefix": "/",
     "mongooseConnectionString": ""
 }
