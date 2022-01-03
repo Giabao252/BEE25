@@ -4,7 +4,7 @@
   "description": "A complete Discord Music Bot \r - Functions: Play, find lyrics, pause, resume, check queue.\r - link to add the bot to your server: https://discord.com/api/oauth2/authorize?client_id=909774865584783361&permissions=8&scope=bot%20applications.commands",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm start"
   },
   "repository": {
     "type": "git",
